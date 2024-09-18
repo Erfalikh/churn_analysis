@@ -1,0 +1,41 @@
+{
+  "name": "JSON to BigQuery Pipeline",
+  "description": "A pipeline that reads JSON files from GCS and writes them to a BigQuery table.",
+  "parameters": [
+    {
+      "name": "input",
+      "label": "Input GCS Path",
+      "helpText": "The Google Cloud Storage location of the input JSON files.",
+      "paramType": "TEXT",
+      "isOptional": false
+    },
+    {
+      "name": "output",
+      "label": "Output BigQuery Table",
+      "helpText": "The BigQuery table where the data will be written. Format: project:dataset.table",
+      "paramType": "TEXT",
+      "isOptional": false
+    },
+    {
+      "name": "stagingLocation",
+      "label": "Staging Location",
+      "helpText": "The Google Cloud Storage location to stage temporary files.",
+      "paramType": "TEXT",
+      "isOptional": false
+    },
+    {
+      "name": "tempLocation",
+      "label": "Temporary Location",
+      "helpText": "The Google Cloud Storage location to store temporary files.",
+      "paramType": "TEXT",
+      "isOptional": false
+    },
+    {
+      "name": "project",
+      "label": "Google Cloud Project ID",
+      "helpText": "The Google Cloud project ID to run the pipeline in.",
+      "paramType": "TEXT",
+      "isOptional": false
+    }
+  ]
+}
